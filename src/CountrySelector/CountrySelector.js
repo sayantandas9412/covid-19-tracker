@@ -21,6 +21,7 @@ const CountrySelector = ({ handleCountryChange }) => {
         onChange={(e) => handleCountryChange(e.target.value)}
       >
         <option value="">Global</option>
+        <option value="India">India</option>
         {fetchedCountries.map((country, i) => {
           return (
             <option key={i} value={country.name}>
