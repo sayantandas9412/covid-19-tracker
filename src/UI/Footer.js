@@ -3,11 +3,11 @@ import React from "react";
 import Styles from "./Footer.module.css";
 
 const Footer = ({ data: { lastUpdate } }) => {
+  const updateDate = new Date(lastUpdate).toString().slice(0, 10);
   return (
     <div className={Styles.container}>
       <span>
-        Last Update{" "}
-        <strong>{new Date(lastUpdate).toDateString().slice(0, 10)}</strong>
+        Last Update <strong>{lastUpdate ? updateDate : null}</strong>
       </span>
       <span className={Styles.dataSource}>
         Data Source :{" "}
