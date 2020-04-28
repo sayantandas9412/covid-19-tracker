@@ -26,7 +26,6 @@ class App extends Component {
 
   render() {
     const { data, country } = this.state;
-    console.log(this.state.data.lastUpdate);
 
     return (
       <div className={Styles.container}>
