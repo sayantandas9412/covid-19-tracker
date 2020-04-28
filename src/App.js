@@ -3,6 +3,7 @@ import Cards from "./Cards/Cards";
 import Charts from "./Charts/Charts";
 import CountrySelector from "./CountrySelector/CountrySelector";
 import CoronaImage from "./images/image.png";
+import Footer from "./UI/Footer";
 
 import Styles from "./App.module.css";
 
@@ -22,8 +23,10 @@ class App extends Component {
     const fetchedData = await fetchData(country);
     this.setState({ data: fetchedData, country: country });
   };
+
   render() {
     const { data, country } = this.state;
+    console.log(this.state.data.lastUpdate);
 
     return (
       <div className={Styles.container}>
@@ -31,6 +34,7 @@ class App extends Component {
         <Cards data={data} />
         <CountrySelector handleCountryChange={this.handleCountryChange} />
         <Charts data={data} country={country} />
+        <Footer data={data} />
       </div>
     );
   }

@@ -44,7 +44,7 @@ const Charts = ({ data, country }) => {
         datasets: [
           {
             label: "People",
-            backgroundColor: ["#569ada", "#3fbe47fa", "#e45b5b"],
+            backgroundColor: ["#569ada", "#3fbe48e0", "#e45b5b"],
             data: [
               data.confirmed.value,
               data.recovered.value,

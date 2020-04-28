@@ -1,0 +1,35 @@
+.container {
+}
+
+span:nth-child(2) {
+  margin-left: 10px;
+}
+.dataSource {
+  margin-top: 2px;
+}
+.dataSource a {
+  text-decoration: none;
+  color: cadetblue;
+}
+.des a {
+  text-decoration: none;
+  color: #e45b5b;
+  font-family: "Playfair Display", serif;
+}
+
+.des {
+  margin: 5px 0 10px 0;
+  padding-left: 40%;
+}
+
+@media (max-width: 770px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .des {
+    padding: 0;
+  }
+}
